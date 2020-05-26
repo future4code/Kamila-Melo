@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*CABEÇALHO*/
+#cabecalho{
+    background-color: rgb(249, 71, 1);
+    padding: 56px;
+    text-align: center;
+}
+
+#cabecalho > a{
+    margin-left: 32px;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#cabecalho > p{
+    font-size: 48px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*CORPO*/
+body{
+    background-color: rgb(34, 34, 34);
+}
+#conteudo1{
+    text-align: center;
+    padding: 139px 0px;
+    font-size: 56px;
+    color: white;
+    
+}
+
+#conteudo2 > p{
+    text-align: center;
+    padding: 139px 0px;
+    color: white;
+    font-size: 24px;
+    
+}
+
+table, th, td, tr{
+    border: 1px solid;
+    margin-top: 200px;
+    margin-left: 300px;
+    text-align: center;
+    margin-bottom: 100px;
+    color: white;
+}
+
+img{
+    width: 10%;
+}
+
+label{
+    color: white;
+    font-weight: bold;
+    
+}
+
+form{
+    margin-top: 250px;
+    margin-bottom: 250px;
+    margin-left: 56px;
+}
+
+button{
+    border-radius: 16px;
+    font-weight: bold;
+    background-color: rgb(249, 71, 1);
+}
+
+#fun{
+    color: white;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    margin-left: 56px;
+}
+
+h1, ul{
+    color: white;
+}
+
+#curiosidades > h1{
+    margin-top: 230px;
+    margin-left: 56px;
+}
+
+#curiosidades > ul{
+    margin-left: 56px;
+    margin-bottom: 230px;
+}
+
+#fale > p{
+    color: white;
+    margin-top: 32px;
+}
+
+#faleconosco{
+    margin-top: 200px;
+    margin-bottom: 250px;
+    margin-left: 56px;
+}
+
+/*RODAPÉ*/
+#rodape{
+    background-color: rgb(249, 71, 1);
+    color: white;
+    font-size: 24px;
+    padding: 1% 16px;
+}
+
+
