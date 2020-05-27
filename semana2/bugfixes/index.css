@@ -73,10 +73,30 @@ a{
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+#container-de-descricao>p {
+    position: absolute;
+    top: 30%;
+    right: 550px;
+    left: 550px;
 }
 
 #container-de-descricao>ol {
-    padding: 15px 0px;
+    position: absolute;
+    top: 40%;
+    right: 550px;
+    left: 550px;
+}
+
+#container-de-descricao>h3 {
+    position: absolute;
+    top: 50%;
+    right: 550px;
+    left: 550px;
 }
 
 #container-para-comprar {
