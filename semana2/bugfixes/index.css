@@ -162,3 +162,9 @@ td button {
 #back-button:hover {
     background-color: #c44f00;
 }
+
+input{
+    border-top: white;
+    border-right: white;
+    border-left: white;
+}
