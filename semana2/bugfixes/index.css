@@ -46,6 +46,10 @@ div img {
     color: white;
 }
 
+a{
+    display: block;
+}
+
 .botao-amarelo:hover {
     background-color: #c44f00;
 }
