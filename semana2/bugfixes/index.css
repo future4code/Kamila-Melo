@@ -164,7 +164,7 @@ td button {
 }
 
 input{
-    border-top: white;
-    border-right: white;
-    border-left: white;
+    border: none;
+    outline:none;
+    border-bottom: 2px solid;
 }
