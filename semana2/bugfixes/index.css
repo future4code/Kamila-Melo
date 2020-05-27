@@ -70,6 +70,14 @@ a{
     height: 25px;
 }
 
+.icone:focus {
+    opacity: 100%;
+}
+
+.icone:hover {
+    opacity: 50%;
+}
+
 
 /** 
   *
