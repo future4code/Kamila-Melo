@@ -1,0 +1,46 @@
+#header{
+    background-color: #2ECC40;
+    width: 100px;
+    display: flex;
+    flex-grow: 1;
+}
+
+#menu{
+    background-color: #FFDC00;
+    width: 100px;
+    display: flex;
+    flex-grow: 1;
+}
+
+#content1{
+    background-color: #F012BE;
+    width: 100px;
+}
+
+#content2{
+    background-color: #0074D9;
+    width: 100px;
+}
+
+#image{
+    background-color: #FF4136;
+    width: 100px;
+}
+
+#extra{
+    background-color: #01FF70;
+    width: 100px;
+}
+
+#footer{
+    background-color: #B10DC9;
+    width: 100px;
+}
+
+.container{
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+
+}
