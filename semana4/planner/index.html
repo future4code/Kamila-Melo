@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Planner</title>
+</head>
+<body>
+    <header>
+        <section id="logo">Planejamento Semanal</section>
+    </header>
+    <main id="container">
+        <section class="dias">Segunda-feira</section>
+        <section class="dias">Terça-feira</section>
+        <section class="dias">Quarta-feira</section>
+        <section class="dias">Quinta-feira</section>
+        <section class="dias">Sexta-feira</section>
+        <section class="dias">Sábado</section>
+        <section class="dias">Domingo</section>
+        <section id="conteudo">
+            <ul id="segunda"></ul>
+        </section>
+        <section id="conteudo">
+            <ul id="terca"></ul>
+        </section>
+        <section id="conteudo">
+            <ul id="quarta"></ul>
+        </section>
+        <section id="conteudo">
+            <ul id="quinta"></ul>
+        </section>
+        <section id="conteudo">
+            <ul id="sexta"></ul>
+        </section>
+        <section id="conteudo">
+            <ul id="sabado"></ul>
+        </section>
+        <section id="conteudo">
+            <ul id="domingo"></ul>
+        </section>        
+    </main>
+    <footer>
+        <section id="addtarefas">
+            <input type="text" value="" id="meu-input">
+            <select name="select" id="selecao">
+                <option value="segunda-feira" id="meu-option">Segunda-feira</option>
+                <option value="terca-feira" id="meu-option">Terça-feira</option>
+                <option value="quarta-feira" id="meu-option">Quarta-feira</option>
+                <option value="quinta-feira" id="meu-option">Quinta-feira</option>
+                <option value="sexta-feira" id="meu-option">Sexta-feira</option>
+                <option value="sabado" id="meu-option">Sábado</option>
+                <option value="domingo" id="meu-option">Domingo</option>
+            </select>
+            <button onclick="adicionaTarefa()">Adicionar Tarefa</button>
+        </section>
+    </footer>
+</body>
+</html>
