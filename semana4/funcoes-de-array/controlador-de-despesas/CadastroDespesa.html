@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Cadastro de despesa</title>
+</head>
+<body>
+
+    <section id="controladorDespesas">
+        <h1>Controlador de Despesas</h1>
+        <section>
+            <h3>Cadastrar despesa</h3>
+        </section>
+        <section>
+            <label for="valor">Valor:</label>
+            <input type="text" id="valor">
+        </section>
+        <section>
+            <label for="tipo">Tipo(Casa, Festas, Viagem, Outros):</label>
+            <select name="tipo" id="tipo">
+                <option value="casa">Casa</option>
+                <option value="festas">Festas</option>
+                <option value="viagem">Viagem</option>
+                <option value="outros">Outros</option>
+            </select>
+        </section>
+        <section>
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao">
+        </section>
+        <section>
+            <button id="btnCadastrar" onclick="cadastraDados(event)">Cadastrar despesa</button>
+        </section>
+    </section>
+    
+    <section id="despesasDetalhadas">
+        <section>
+            <h1>Despesas Detalhadas</h1>
+        </section>
+        <section>
+            <label for="tipoDet">Tipo(Casa, Festas, Viagem, Outros):</label>
+            <select name="tipo" id="tipoDet">
+                <option value="casa">Casa</option>
+                <option value="festas">Festas</option>
+                <option value="viagem">Viagem</option>
+                <option value="outros">Outros</option>
+            </select>
+        </section>
+        <section>
+            <label for="valorMin">Valor Mínimo:</label>
+            <input type="text" id="valorMin">
+        </section>
+        <section>
+            <label for="valorMax">Valor Máximo:</label>
+            <input type="text" id="valorMax">
+        </section>
+        <section>
+            <button id="filtrar" onclick="filtrar(event)">Filtrar</button>
+            <button id="limpar">Limpar Filtros</button>
+        </section>
+        <section id="detalhadas"></section>
+    </section>
+    
+</body>
+</html>
