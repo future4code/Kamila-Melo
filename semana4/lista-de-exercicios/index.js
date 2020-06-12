@@ -44,7 +44,6 @@
 // const dobra = array.map((elemento,index,array)=>{
 //     return elemento * 2
 // })
-
 // console.log(dobra)
 
 //filter
@@ -55,5 +54,11 @@
 //     }
 //         return false
 // })
-
 // console.log(impares)
+
+/*NÚMERO 2*/
+//LETRA A: False
+//LETRA B: True
+//LETRA C: True
+//LETRA D: True
+//LETRA E: True
