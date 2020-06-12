@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Blog</h1>
+        </section>
+    </header>
+    <main id="container">
+        <section id="form">
+            <h1>Escreva aqui sua publicação:</h1>
+            <section>
+                <br>
+                <br>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo">
+            </section>
+            <section>
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor">
+            </section>
+            <section>
+                <label for="conteudo">Conteúdo:</label>
+                <textarea name="conteudo" id="conteudo" cols="50" rows="20"></textarea>
+            </section>
+            <section>
+                <label for="imagem">Link Imagem:</label>
+                <input type="text" id="imagem">
+            </section>
+            <button onclick="pegaInformacoes(event)">Publicar</button>
+        </section>
+        <section id="publicado">
+            
+        </section>
+    </main>
+</body>
+</html>
