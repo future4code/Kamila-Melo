@@ -17,10 +17,16 @@
 
 /*NÚMERO 3*/
 //Separa em arrays diferentes os números pares e números ímpares. É dado um array com alguns números e outros dois arrays vazios.
-//É chamado um for para verificar todos os elementos do array são pares, se for é jogado para o array1, se eles forem ímpar são jogados no
+//É chamado um for para verificar se todos os elementos do array são pares, se for é jogado para o array1, se eles forem ímpar são jogados no
 //array2. Nas próximas linhas tem 3 console.log, o primeiro para imprimir a quantidade total de numeros dentro do array principal, o segundo
 //para imprimir a quantidade total de numeros pares e o terceiro para imprimir a quantidade total de numeros ímpares. O valor impresso é
 //Quantidade total de números 14
 //6
 //8
 
+/*NÚMERO 4*/
+//Mostra o maior e o menor número dentro de um array. É dado um array com alguns números e criado duas variáveis, numero1 com valor infinity,
+//e numero2 com valor 0. É chamado um for para verificar em um if se cada elemento do array é menor, o primeiro é comparado com infinity, se for menor
+//ele é armazenado na variável numero1 e feito outra comparação com todos os elementos até buscar o menor. Em outro if verifica se cada 
+//elemento do array é maior, o primeiro é comparado com 0, se for maior ele é armazenado na variável numero2 e feito outra comparação
+// com todos os elementos até buscar o maior. Os valores impressos no console.log é -10 e 1590
