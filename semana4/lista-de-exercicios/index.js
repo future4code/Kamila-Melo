@@ -62,3 +62,12 @@
 //LETRA C: True
 //LETRA D: True
 //LETRA E: True
+
+/*NÚMERO 3*/
+//Não funciona, pois não foi atribuido um valor para a const quantidadeDeNumerosPares e não foi colocado o incremento i++ no final do while
+const quantidadeDeNumerosPares = 5
+let i = 0
+while(i < quantidadeDeNumerosPares) {
+  console.log(i*2)
+  i++
+}
