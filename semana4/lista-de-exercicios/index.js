@@ -30,3 +30,30 @@
 //ele é armazenado na variável numero1 e feito outra comparação com todos os elementos até buscar o menor. Em outro if verifica se cada 
 //elemento do array é maior, o primeiro é comparado com 0, se for maior ele é armazenado na variável numero2 e feito outra comparação
 // com todos os elementos até buscar o maior. Os valores impressos no console.log é -10 e 1590
+
+/*Exercícios de Lógica de Programação*/
+/*NÚMERO 1*/
+//forEach
+// let array = [1,2,3,4];
+// array.forEach((elemento,index,array)=>{
+//     console.log(`${index} = ${elemento}`)
+// })
+
+//map
+// let array = [1,2,3,4];
+// const dobra = array.map((elemento,index,array)=>{
+//     return elemento * 2
+// })
+
+// console.log(dobra)
+
+//filter
+// let array = [1,2,3,4,5,6,7,8,9,10];
+// const impares = array.filter((elemento,index,array)=>{
+//     if(elemento % 2 !== 0){
+//         return true
+//     }
+//         return false
+// })
+
+// console.log(impares)
