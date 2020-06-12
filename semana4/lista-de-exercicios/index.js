@@ -65,9 +65,18 @@
 
 /*NÚMERO 3*/
 //Não funciona, pois não foi atribuido um valor para a const quantidadeDeNumerosPares e não foi colocado o incremento i++ no final do while
-const quantidadeDeNumerosPares = 5
-let i = 0
-while(i < quantidadeDeNumerosPares) {
-  console.log(i*2)
-  i++
-}
+// const quantidadeDeNumerosPares = 5
+// let i = 0
+// while(i < quantidadeDeNumerosPares) {
+//   console.log(i*2)
+//   i++
+// }
+
+
+/*NÚMERO 4*/
+// function triangulo (a,b,c){
+//     if((b!== a) && (b!== c) && (a!==c)) console.log("Escaleno") //3 lados diferentes 
+//     else if((b===a) && (b===c) && (a===c)) console.log("Equilátero") //3 lados iguais
+//     else console.log("Isósceles") //2 lados iguais
+// }
+// triangulo(3,4,1)
