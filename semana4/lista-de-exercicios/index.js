@@ -80,3 +80,29 @@
 //     else console.log("Isósceles") //2 lados iguais
 // }
 // triangulo(3,4,1)
+
+/*NÚMERO 5*/
+// let a = 15
+// let b = 30
+
+// function maiorNumero(a,b){
+//     if(a > b) console.log("O maior é: " + a)
+//     else if (a < b) console.log("O maior é: " + b)
+// }
+
+// function divisivel(a,b){
+//     if(a%b===0) console.log(a + " é divisível por " + b)
+//     else console.log(a + " não é divisível por " + b)
+//     if(b%a===0) console.log(b + " é divisível por " + a)
+//     else console.log(b + " não é divisível por " + a)
+// }
+
+// function diferenca(a,b){
+//     if(a > b) console.log("A diferença entre eles é: " + Number(a-b))
+//     else if (b > a) console.log("A diferença entre eles é: " + Number(b-a))
+// }
+
+
+// maiorNumero(a,b)
+// divisivel(a,b)
+// diferenca(a,b)
