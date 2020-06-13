@@ -106,3 +106,26 @@
 // maiorNumero(a,b)
 // divisivel(a,b)
 // diferenca(a,b)
+
+/*Exercícios de Funções*/
+/*NÚMERO 1*/
+// let array = [100,700,500,900,400,200,300,600]
+
+// function maioresNumeros(){
+//     let numero1 = 0
+//     let numero2 = numero1
+
+//     for(elemento of array){
+//         if(elemento > numero1){
+//             numero1 = elemento
+//         }
+//     }
+//     for(elemento of array){
+//         if((elemento > numero2) && (elemento !== numero1)){
+//             numero2 = elemento
+//         }
+//     }
+//     console.log(numero1,numero2)
+// }
+
+// maioresNumeros()
