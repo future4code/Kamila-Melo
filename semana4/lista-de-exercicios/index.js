@@ -144,30 +144,43 @@
 //sobre o mesmo contexto.
 
 /*NÚMERO 2*/
-let retangulo = {
-    largura: 0,
-    altura: 0,
-    perimetro:0,
-    area: 0
-}
+// let retangulo = {
+//     largura: 0,
+//     altura: 0,
+//     perimetro:0,
+//     area: 0
+// }
 
-function criaRetangulo (lado1,lado2){
-    const largura = lado1
-    const altura = lado2
-    const perimetro = (2*(lado1+lado2))
-    const area = (lado1*lado2)
+// function criaRetangulo (lado1,lado2){
+//     const largura = lado1
+//     const altura = lado2
+//     const perimetro = (2*(lado1+lado2))
+//     const area = (lado1*lado2)
     
 
-    const novoRetangulo = {
-        ...retangulo
-    }
+//     const novoRetangulo = {
+//         ...retangulo
+//     }
     
-    novoRetangulo.largura = lado1
-    novoRetangulo.altura = lado2
-    novoRetangulo.perimetro = perimetro
-    novoRetangulo.area = area
+//     novoRetangulo.largura = lado1
+//     novoRetangulo.altura = lado2
+//     novoRetangulo.perimetro = perimetro
+//     novoRetangulo.area = area
 
-    console.log(novoRetangulo)
+//     console.log(novoRetangulo)
+// }
+
+// criaRetangulo(2,2)
+
+/*NÚMERO 3*/
+let filme = {
+    titulo: 'Harry Potter e a Pedra Filosofal',
+    ano: 2001,
+    diretor: 'Chris Columbus',
+    ator1: 'Daniel Radcliffe',
+    ator2: 'Rupert Grint',
+    atriz: 'Emma Watson'
 }
 
-criaRetangulo(2,2)
+console.log(`Venha assistir ao filme ${filme.titulo}, de ${filme.ano}, dirigido por ${filme.diretor}
+e estrelado por ${filme.ator1}, ${filme.ator2} e ${filme.atriz}.`)
