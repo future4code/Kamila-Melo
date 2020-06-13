@@ -173,14 +173,32 @@
 // criaRetangulo(2,2)
 
 /*NÚMERO 3*/
-let filme = {
-    titulo: 'Harry Potter e a Pedra Filosofal',
-    ano: 2001,
-    diretor: 'Chris Columbus',
-    ator1: 'Daniel Radcliffe',
-    ator2: 'Rupert Grint',
-    atriz: 'Emma Watson'
-}
+// let filme = {
+//     titulo: 'Harry Potter e a Pedra Filosofal',
+//     ano: 2001,
+//     diretor: 'Chris Columbus',
+//     ator1: 'Daniel Radcliffe',
+//     ator2: 'Rupert Grint',
+//     atriz: 'Emma Watson'
+// }
 
-console.log(`Venha assistir ao filme ${filme.titulo}, de ${filme.ano}, dirigido por ${filme.diretor}
-e estrelado por ${filme.ator1}, ${filme.ator2} e ${filme.atriz}.`)
+// console.log(`Venha assistir ao filme ${filme.titulo}, de ${filme.ano}, dirigido por ${filme.diretor}
+// e estrelado por ${filme.ator1}, ${filme.ator2} e ${filme.atriz}.`)
+
+/*NÚMERO 4*/
+// const pessoa = {
+//     nome: 'Kamila',
+//     idade: 32,
+//     email: 'kamilamelo5@hotmail.com',
+//     endereco: 'Rua Pedro Americo'
+// }
+
+// function anonimizarPessoa(){
+//     const anonimo = {
+//         ...pessoa,
+//         nome: 'ANÔNIMO'
+//     }
+//     console.log(anonimo)
+// }
+
+anonimizarPessoa()
