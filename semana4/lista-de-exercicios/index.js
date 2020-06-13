@@ -142,3 +142,32 @@
 /*NÚMERO 1*/
 //São tipos epeciais de variáveis, onde conseguimos armazenar informações compostas. Podemos usá-las quando queremos guardar vários dados
 //sobre o mesmo contexto.
+
+/*NÚMERO 2*/
+let retangulo = {
+    largura: 0,
+    altura: 0,
+    perimetro:0,
+    area: 0
+}
+
+function criaRetangulo (lado1,lado2){
+    const largura = lado1
+    const altura = lado2
+    const perimetro = (2*(lado1+lado2))
+    const area = (lado1*lado2)
+    
+
+    const novoRetangulo = {
+        ...retangulo
+    }
+    
+    novoRetangulo.largura = lado1
+    novoRetangulo.altura = lado2
+    novoRetangulo.perimetro = perimetro
+    novoRetangulo.area = area
+
+    console.log(novoRetangulo)
+}
+
+criaRetangulo(2,2)
