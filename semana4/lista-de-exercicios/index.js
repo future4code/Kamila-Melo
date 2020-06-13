@@ -129,3 +129,16 @@
 // }
 
 // maioresNumeros()
+
+/*NÚMERO 2*/
+// let invocacao = function (frase){
+//     return frase
+// }
+
+// const resultado = invocacao("Hello Labenu")
+// alert(resultado)
+
+/*Exercícios de Objetos*/
+/*NÚMERO 1*/
+//São tipos epeciais de variáveis, onde conseguimos armazenar informações compostas. Podemos usá-las quando queremos guardar vários dados
+//sobre o mesmo contexto.
