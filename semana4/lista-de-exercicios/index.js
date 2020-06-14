@@ -206,18 +206,67 @@
 /*Exercícios de Funções de array*/
 /*NÚMERO 1*/
 /*LETRA A*/
-const pessoas = [
-	{ nome: "Pedro", idade: 20 },
-	{ nome: "João", idade: 10 },
-	{ nome: "Paula", idade: 12 },
-	{ nome: "Artur", idade: 89 } 
-]
+// const pessoas = [
+// 	{ nome: "Pedro", idade: 20 },
+// 	{ nome: "João", idade: 10 },
+// 	{ nome: "Paula", idade: 12 },
+// 	{ nome: "Artur", idade: 89 } 
+// ]
 
-const soAdultos = pessoas.filter((elemento,index,array)=>{
-    if(elemento.idade>=20){
-        return true
+// const soAdultos = pessoas.filter((elemento,index,array)=>{
+//     if(elemento.idade>=20){
+//         return true
+//     }
+//     return false
+// })
+
+// console.log(soAdultos)
+
+/*LETRA B*/
+// const pessoas = [
+// 	{ nome: "Pedro", idade: 20 },
+// 	{ nome: "João", idade: 10 },
+// 	{ nome: "Paula", idade: 12 },
+// 	{ nome: "Artur", idade: 89 } 
+// ]
+
+// const soCriancasAdolescentes = pessoas.filter((elemento,index,array)=>{
+//     if(elemento.idade < 20){
+//         return true
+//     }
+//     return false
+// })
+
+// console.log(soCriancasAdolescentes)
+
+/*NÚMERO 2*/
+/*LETRA A*/
+// const array = [1, 2, 3, 4, 5, 6]
+
+// const numerosMulti2 = array.map((elemento,index,array)=>{
+//     return elemento*2
+// })
+
+// console.log(numerosMulti2)
+
+/*LETRA B*/
+// const array = [1, 2, 3, 4, 5, 6]
+
+// const numerosMulti3 = array.map((elemento,index,array)=>{
+//     const resultado = elemento*3
+//     return resultado.toString()
+// })
+
+// console.log(numerosMulti3)
+
+/*LETRA C*/
+const array = [1, 2, 3, 4, 5, 6]
+
+const parImpar = array.map((elemento,index,array)=>{
+    if(elemento%2===0){
+        return `${elemento} é par`
     }
-    return false
+    return `${elemento} é ímpar`
 })
 
-console.log(soAdultos)
+console.log(parImpar)
