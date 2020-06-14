@@ -337,3 +337,26 @@
 // })
 
 // console.log(emails)
+
+/*NÚMERO 5*/
+// const contas = [
+// 	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+// 	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+// 	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+// 	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+// 	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+// 	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+// ]
+
+// let total = 0
+
+// const calculaContas = contas.forEach((elemento,index,array)=>{
+    
+//     for(let i = 0; i < elemento.compras.length; i++){
+//         total += elemento.compras[i];
+//     }
+//     elemento.saldoTotal = elemento.saldoTotal - total
+//     total = 0
+    
+// })
+// console.log(contas)
