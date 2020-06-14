@@ -201,4 +201,23 @@
 //     console.log(anonimo)
 // }
 
-anonimizarPessoa()
+// anonimizarPessoa()
+
+/*Exercícios de Funções de array*/
+/*NÚMERO 1*/
+/*LETRA A*/
+const pessoas = [
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+
+const soAdultos = pessoas.filter((elemento,index,array)=>{
+    if(elemento.idade>=20){
+        return true
+    }
+    return false
+})
+
+console.log(soAdultos)
