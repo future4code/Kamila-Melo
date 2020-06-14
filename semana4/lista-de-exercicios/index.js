@@ -309,3 +309,31 @@
 // })
 
 // console.log(pessoasNaoPermitidas)
+
+/*NÚMERO 4*/
+// const consultas = [
+// 	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+// 	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+// 	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+// 	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+// ]
+
+// consultas.forEach((elemento,index,array) =>{
+//     if(elemento.genero === "masculino"){
+//         elemento.genero = "Sr. "
+//     }else{
+//         elemento.genero = "Sra. "
+//     }
+    
+// })
+
+// const emails = consultas.map((elemento,index,array)=>{
+//     if(elemento.cancelada === true){
+//         return `Olá, ${elemento.genero} ${elemento.nome}. Infelizmente, sua consulta marcada para o dia ${elemento.dataDaConsulta} foi cancelada.
+//         Se quiser, pode entrar em contato conosco para remarcá-la.`
+//     }
+//         return `Olá, ${elemento.genero} ${elemento.nome}.Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${elemento.dataDaConsulta}.
+//         Por favor, acuse o recebimento deste e-mail.`
+// })
+
+// console.log(emails)
