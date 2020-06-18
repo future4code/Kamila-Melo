@@ -4,6 +4,7 @@ import Post from './components/Post/Post';
 import styled from 'styled-components'
 
 
+
 const UserPhoto = styled.img `
   height: 30px;
   width: 30px;
@@ -27,6 +28,20 @@ const PostHeader = styled.div`
   align-items: center;
   padding-left: 10px;
 ` 
+
+const PostagemInputs = styled.input`
+text-align:center;
+height:20px;
+margin: 8px 0;
+`
+
+const DivPai = styled.div`
+text-align:center;
+display:flex;
+flex-direction: column;
+align-items:center;
+`
+
 
 class App extends React.Component {
   
@@ -75,7 +90,7 @@ class App extends React.Component {
   
   
   render() {
-
+    
     const listaDePosts = this.state.posts.map((post)=>{
       return(
         <PostContainer>
@@ -89,29 +104,29 @@ class App extends React.Component {
     })
 
     return (
-      <div>
-        <div>
-          <input
+      <DivPai>
+        <DivPai>
+          <PostagemInputs
             value={this.state.valorNomeUsuario}
             onChange={this.onChangeInputUsuario}
             placeholder={"Usuário"}
           />
-          <input
+          <PostagemInputs
             value={this.state.valorFotoUsuario}
             onChange={this.onChangeInputFotoUsuario}
             placeholder={"Foto de perfil"}
           />
-          <input
+          <PostagemInputs
             value={this.state.valorFotoPost}
             onChange={this.onChangeInputFotoPost}
             placeholder={"Foto do Post"}
           />
           <button onClick={this.adicionaPost}>Publicar</button>
-        </div>
-      <div>
-        {listaDePosts}
-      </div>
-      </div>
+          <hr />
+          {listaDePosts}
+        </DivPai>
+        
+      </DivPai>
     );
   }
 }
