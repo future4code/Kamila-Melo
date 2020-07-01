@@ -17,7 +17,9 @@ class ListaUsuarios extends React.Component{
                 <h2>Usuários Cadastrados:</h2>
                 <Nomes> 
                     {this.props.listausuarios.map(usuario => {
-                        return <p>{usuario.name} <button onClick={this.props.onClickDeletar}>Deletar</button></p> 
+                        return <div key={usuario.id}>
+                            <p >{usuario.name} <button onClick={()=>this.props.onClickDeletar(usuario.id)}>Deletar</button></p>
+                        </div>
                     })}
                     
                 </Nomes>

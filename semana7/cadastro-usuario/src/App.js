@@ -53,13 +53,19 @@ class App extends React.Component{
   }
 
   removeNome = (userId) => {
-    axios.delete("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${userId}",{headers:{Authorization:"kamila-melo-turing"}
-  }).then(response => {
-    this.setState({usuarios: response.data});
-  }).catch(error=>{
-    console.log(error.data)
-  })
-  }
+    
+    if(window.confirm("Deseja realmente excluir o usuário?") === true){
+      axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${userId}`,{headers:{Authorization:"kamila-melo-turing"}
+    }).then(response => {
+      this.verListaUsuarios();
+      alert("Usuário deletado com sucesso!")
+    }).catch(error=>{
+      console.log(error.data)
+      alert("Erro ao deletar usuário.")
+    })
+    }
+    }
+  
 
   onChangeNomeValue = event =>{
     this.setState({nomeValue: event.target.value})
