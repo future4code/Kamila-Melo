@@ -20,7 +20,8 @@ class App extends React.Component{
     usuarios: [],
     nomeValue:"",
     emailValue: "",
-    lista: false
+    lista: false,
+    filtro:""
   }
 
   componentDidMount = () => {
@@ -75,6 +76,10 @@ class App extends React.Component{
     this.setState({emailValue: event.target.value})
   }
 
+  onChangeFilter = event => {
+    this.setState({ filtro: event.target.value })
+  }
+
   renderizaListaDeUsuarios = ()=>{
     this.setState({lista: !this.state.lista});
   }
@@ -101,6 +106,8 @@ class App extends React.Component{
         <ListaUsuarios 
               listausuarios={this.state.usuarios}
               onClickDeletar = {this.removeNome}
+              onChangeFilter = {this.onChangeFilter}
+              filtro = {this.state.filtro}
           />
       </AppContainer>
 
