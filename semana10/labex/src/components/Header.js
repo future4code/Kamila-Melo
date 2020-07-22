@@ -2,11 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const TitleHeader = styled.h1`
-    background-color: green;
+    background-color: #3f48cc;
     color: white;
-    text-align: center;
-    height: 6vh;
+    height: 60px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 function Header () {

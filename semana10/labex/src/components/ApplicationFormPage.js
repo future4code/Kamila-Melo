@@ -1,5 +1,6 @@
 import React from 'react'
 import {useHistory} from 'react-router-dom'
+import Header from './Header'
 
 function ApplicationFormPage(){
     const history = useHistory()
@@ -10,6 +11,7 @@ function ApplicationFormPage(){
 
     return(
         <div>
+            <Header />
             <h1>Inscrição</h1>
             <div>
                 <label>Viagem: </label>
