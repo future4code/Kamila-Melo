@@ -18,27 +18,26 @@ const ButtonHeader = styled.button`
     justify-content: baseline;
     width: 5%;
     height: 35px;
-    background-color: red;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 32px;
     outline: none;
 `
 
-function Header () {
+function HeaderHome () {
     const history = useHistory()
 
-    const handleLogout = () => {
-        window.localStorage.clear();
-        history.push("/login");
-      };
+    const goToLoginPage = () => {
+        history.push("/login")
+    }
 
     return(
         <DivHeader>
             <h1>Labex</h1>
-            <ButtonHeader onClick={handleLogout}>Fazer Logout</ButtonHeader>
+            <ButtonHeader onClick={goToLoginPage}>Fazer Login</ButtonHeader>
         </DivHeader>
     )
 }
 
-export default Header
+export default HeaderHome

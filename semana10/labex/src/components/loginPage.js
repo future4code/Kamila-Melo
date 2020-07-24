@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom'
 import Header from './Header'
 import axios from 'axios'
 import styled from 'styled-components'
+import useForm from './useForm'
 
 const ContainerLogin = styled.div`
     width: 100%;
@@ -76,33 +77,34 @@ const H1 = styled.h1`
 `
 
 function LoginPage (){
+    const { form, onChange } = useForm({
+        email: "",
+        password: "",
+      });
+
+      const handleInputChange = event => {
+        const { name, value } = event.target;
+    
+        onChange(name, value);
+      };
 
     const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/kamila-melo-turing"
 
     const history = useHistory()
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
 
     const goToHomePage = () => {
         history.push("/")
     }
 
-    const onChangeEmail = (event) => {
-        setEmail(event.target.value)
-    }
-
-    const onChangePassword = (event) => {
-        setPassword(event.target.value)
-    }
-
-    const handleLogin = () => {
+    const handleLogin = (event) => {
+        event.preventDefault()
         const body = {
-            email: email,
-            password: password
+            email: form.email,
+            password: form.password
         }
         axios.post(`${baseUrl}/login`,body).then((response)=>{
             window.localStorage.setItem("token", response.data.token)
-            history.push("/trips/details")
+            history.push("/trips/list")
         }).catch((error) => {
             alert("Seu usuário ou senha estão incorretos.")
         })
@@ -112,18 +114,33 @@ function LoginPage (){
         <ContainerLogin>
             <H1>Login</H1>
             <DivLogin>
-                <div>
-                    <LabelLogin>E-mail: </LabelLogin>
-                    <InputLogin type='text' value={email} onChange={onChangeEmail}/>
-                </div>
-                <DivPassword>
-                    <LabelLogin>Senha: </LabelLogin>
-                    <InputLogin type='password' value={password} onChange={onChangePassword}/>
-                </DivPassword>
-                <DivButtons>
-                    <ButtonLogin onClick={handleLogin}>Entrar</ButtonLogin>
-                    <ButtonHome onClick={goToHomePage}>Home</ButtonHome>
-                </DivButtons>
+                <form onSubmit={handleLogin}>
+                    <div>
+                        <LabelLogin>E-mail: </LabelLogin>
+                        <InputLogin 
+                            name="email"
+                            type="email"
+                            value={form.email}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <DivPassword>
+                        <LabelLogin>Senha: </LabelLogin>
+                        <InputLogin 
+                            name="password"
+                            type='password'
+                            value={form.password}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </DivPassword>
+                    <DivButtons>
+                        <ButtonLogin>Entrar</ButtonLogin>
+                        
+                    </DivButtons>
+                </form>
+                <ButtonHome onClick={goToHomePage}>Home</ButtonHome>
             </DivLogin>
         </ContainerLogin>
     )

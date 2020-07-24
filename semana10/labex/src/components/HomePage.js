@@ -1,6 +1,11 @@
 import React from 'react'
-import Header from './Header'
+import HeaderHome from './HeaderHome'
 import {useHistory} from 'react-router-dom'
+import styled from 'styled-components'
+
+const ButtonLogin = styled.button`
+    height: 1000px;
+`
 
 function HomePage () {
     const history = useHistory()
@@ -9,16 +14,11 @@ function HomePage () {
         history.push("/application-form")
     }
 
-    const goToLoginPage = () => {
-        history.push("/login")
-    }
-
     return(
         <div>
-            <Header/>
+            <HeaderHome />
             <p>Home</p>
-            <button onClick={goToFormPage}>Fazer inscrição</button>
-            <button onClick={goToLoginPage}>Entar como administrador</button>
+            <button onClick={goToFormPage}>Inscrever-se</button>
         </div>
     )
 }
