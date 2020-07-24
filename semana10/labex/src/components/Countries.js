@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Countries = () => {
     return(
-        <select>
+        <>
             <option value="África do Sul">África do Sul</option>
             <option value="Albânia">Albânia</option>
             <option value="Alemanha">Alemanha</option>
@@ -177,7 +177,7 @@ const Countries = () => {
             <option value="Zaire">Zaire</option>
             <option value="Zâmbia">Zâmbia</option>
             <option value="Zimbábue">Zimbábue</option>
-        </select>
+        </>
     )
 }
 

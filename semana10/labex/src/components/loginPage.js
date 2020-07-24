@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {useHistory} from 'react-router-dom'
-import Header from './Header'
 import axios from 'axios'
 import styled from 'styled-components'
 import useForm from './useForm'
@@ -88,7 +87,7 @@ function LoginPage (){
         onChange(name, value);
       };
 
-    const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/kamila-melo-turing"
+    const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/kamila-turing"
 
     const history = useHistory()
 
@@ -140,7 +139,9 @@ function LoginPage (){
                         
                     </DivButtons>
                 </form>
-                <ButtonHome onClick={goToHomePage}>Home</ButtonHome>
+                <DivButtons>
+                    <ButtonHome onClick={goToHomePage}>Home</ButtonHome>
+                </DivButtons>
             </DivLogin>
         </ContainerLogin>
     )

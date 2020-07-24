@@ -38,18 +38,35 @@ const H1 = styled.h1`
     text-align: center;
 `
 
+const ButtonCreateTrip = styled.button`
+    position: relative;
+    right: -50px;
+    justify-content: baseline;
+    width: 5%;
+    height: 35px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 32px;
+    outline: none;
+    margin-top: 16px;
+`
+
 function ListTripsPage(props){
     const history = useHistory()
 
     const [trips, setTrips] = useState ([])
-    const [tripId, setTripId] = useState("")
+
+    const goToCreateTripPage = () => {
+        history.push("/trips/create")
+    }
 
     useEffect(() => {
         handleTrips()
     },[])
 
     const handleTrips = () =>{
-        axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/kamila-melo-turing/trips').then(response => {
+        axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/kamila-turing/trips').then(response => {
             setTrips(response.data.trips)
         }).catch(error => {
             console.log(error.message)
@@ -63,6 +80,7 @@ function ListTripsPage(props){
     return(
         <div>
             <Header />
+            <ButtonCreateTrip onClick={goToCreateTripPage}>Criar Viagem</ButtonCreateTrip>
             <H1>Lista de Viagens</H1>
             <CardTripContainer>
             {trips.map(trip => {

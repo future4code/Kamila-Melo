@@ -35,7 +35,7 @@ function Header () {
 
     return(
         <DivHeader>
-            <h1>Labex</h1>
+            <h1>LabeX</h1>
             <ButtonHeader onClick={handleLogout}>Fazer Logout</ButtonHeader>
         </DivHeader>
     )

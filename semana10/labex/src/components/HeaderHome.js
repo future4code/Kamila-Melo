@@ -34,7 +34,7 @@ function HeaderHome () {
 
     return(
         <DivHeader>
-            <h1>Labex</h1>
+            <h1>LabeX</h1>
             <ButtonHeader onClick={goToLoginPage}>Fazer Login</ButtonHeader>
         </DivHeader>
     )

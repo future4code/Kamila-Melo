@@ -60,9 +60,13 @@ const CardApproveds = styled.div`
     display: flex;
 `
 
-const ButtonCreateTrip = styled.button`
+const P = styled.p`
+    width: 20%;
+`
+
+const ButtonListTrips = styled.button`
     position: relative;
-    left: -900px;
+    left: -850px;
     justify-content: baseline;
     width: 5%;
     height: 35px;
@@ -79,7 +83,7 @@ function TripDetailsPage (props){
     const [candidates, setCandidates] = useState()
     const [approved, setApproved] = useState()
 
-    const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/kamila-melo-turing"
+    const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labeX/kamila-turing"
 
     const history = useHistory()
     const params = useParams()
@@ -109,9 +113,6 @@ function TripDetailsPage (props){
         })
     }
 
-    const goToCreateTripPage = () => {
-        history.push("/trips/create")
-    }
 
     const onClickReject = (candidateId) => {
         const body = {
@@ -144,16 +145,20 @@ function TripDetailsPage (props){
         })
     }
 
+    const goToListTripsPage = () => {
+        history.push("/trips/list")
+    }
+
     return(
         <TripDetailContainer>
             <Header />
-            <ButtonCreateTrip onClick={goToCreateTripPage}>Criar Viagem</ButtonCreateTrip>
+            <ButtonListTrips onClick={goToListTripsPage}>Lista de Viagens</ButtonListTrips>
             <h1>Detalhes da viagem</h1>
             <CardTrip>
-                <p><strong>Planeta: </strong>{tripDetail.planet}</p>
-                <p><strong>Nome: </strong>{tripDetail.name}</p>
-                <p><strong>Descrição: </strong>{tripDetail.durationInDays} dias</p>
-                <p><strong>Data prevista: </strong>{tripDetail.date}</p>
+                <P><strong>Planeta: </strong>{tripDetail.planet}</P>
+                <P><strong>Nome: </strong>{tripDetail.name}</P>
+                <P><strong>Descrição: </strong>{tripDetail.durationInDays} dias</P>
+                <P><strong>Data prevista: </strong>{tripDetail.date}</P>
             </CardTrip>
             <h1>Candidatos:</h1>
             <CardCandidates>
@@ -163,7 +168,7 @@ function TripDetailsPage (props){
                             <p><strong>Nome: </strong>{candidate.name}</p>
                             <p><strong>Idade: </strong>{candidate.age} anos</p>
                             <p><strong>País: </strong>{candidate.country}</p>
-                            <p><strong>Motivo: </strong>{candidate.applicationText}</p>
+                            <props><strong>Motivo: </strong>{candidate.applicationText}</props>
                             <p><strong>Profissão: </strong>{candidate.profession}</p>
                             <ButtonReject onClick={() => onClickReject(candidate.id)}>Rejeitar</ButtonReject>
                             <ButtonAccept onClick={() => onClickApproved(candidate.id)}>Aprovar</ButtonAccept>
