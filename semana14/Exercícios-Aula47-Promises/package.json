@@ -1,0 +1,25 @@
+{
+  "name": "promises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start1": "tsc && node ./build/exercicio1.js",
+    "start2": "tsc && node ./build/exercicio2.js",
+    "start3": "tsc && node ./build/exercicio3.js",
+    "start4": "tsc && node ./build/exercicio4.js",
+    "start5": "tsc && node ./build/exercicio5.js",
+    "start6": "tsc && node ./build/exercicio6.js",
+    "start7": "tsc && node ./build/exercicio7.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kamila-Melo",
+  "license": "ISC",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^14.6.1",
+    "axios": "^0.20.0",
+    "moment": "^2.27.0",
+    "typescript": "^4.0.2"
+  }
+}
