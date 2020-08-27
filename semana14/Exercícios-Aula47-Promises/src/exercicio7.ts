@@ -1,12 +1,20 @@
-//LETRA A: Ela envia todas as funções de uma vez
-
-//LETRA B: As notificações são enviadas para todos ao invés de um por um 
-
-//LETRA C:
 import axios from 'axios'
 import moment, { Moment } from 'moment'
 
 const baseUrl = "https://us-central1-labenu-apis.cloudfunctions.net/labenews";
+
+const createSubscribe = async(name: string, email:string): Promise<void> => {
+    try{
+        await axios.put(`${baseUrl}/subscribers`,{
+            name,
+            email
+        })
+        console.log("Inscrito com sucesso!")
+    }
+    catch(e){
+        console.log(e.response.data)
+    }
+}
 
 const createNews = async(title:string, content: string, date: Moment): Promise<void> => {
     try{
@@ -64,6 +72,8 @@ const getNotifications = async(subscriberId: string): Promise<News[]> => {
 
 const main = async() => {
     try{
+        await createSubscribe("Kamila", "kamila@gmail.com")
+
         await createNews("Torneio de Valorant 2", "irá acontecer no final dessa semana um torneio de Valorant", moment("29/08/2020", "DD/MM/YYYY"))
 
         const users = await getSubscribers()
