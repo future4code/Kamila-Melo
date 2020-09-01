@@ -1,0 +1,18 @@
+{
+  "name": "exercicio-aula49",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kamila-melo",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.6.2",
+    "moment": "^2.27.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  }
+}
