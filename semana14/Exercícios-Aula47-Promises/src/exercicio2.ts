@@ -1,4 +1,5 @@
-//LETRA A: 
+//LETRA A: Função nomeada vem com o async antes da palavra function, após abre e fecha parênteses e abre e fecha chaves
+//arrow function começa declarando uma variável e depois do igual se colocar o async seguindo o tipo da função e uma seta
 
 //LETRA B:
 import axios from 'axios'
