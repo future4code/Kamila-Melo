@@ -1,0 +1,17 @@
+{
+  "name": "typescript-node-aula45",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kamila-melo",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.6.0",
+    "moment": "^2.27.0",
+    "typescript": "^4.0.2"
+  }
+}
