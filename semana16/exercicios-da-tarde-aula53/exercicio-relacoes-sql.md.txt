@@ -1,0 +1,121 @@
+### Exercício 1
+
+a) Chave estrangeira indica uma propriedade que se refere a uma primary key de outra tabela.
+
+b) 
+```
+CREATE TABLE Evaluation (
+id VARCHAR(255) PRIMARY KEY,
+comment TEXT NOT NULL,
+rate FLOAT NOT NULL,
+movie_id VARCHAR(255),
+FOREIGN KEY (movie_id) REFERENCES movie(id)
+);
+
+insert into Evaluation (id, comment, rate, movie_id)
+values(
+"1",
+"O roteiro é meio confuso em vários momentos, mas 100% perdoável porque a Fernanda Montenegro arrasa em literalmente todas as cenas.",
+9,
+"002"
+);
+
+insert into Evaluation (id, comment, rate, movie_id)
+values(
+"2",
+"Espetacular filme. Os personagens são complexos, as cenas são perfeitamente exploradas, em suas tomadas, na fotografia, na sonoridade, na trilha sonora. O clima criado é perfeito.",
+10,
+"003"
+);
+
+insert into Evaluation (id, comment, rate, movie_id)
+values(
+"3",
+"Coloca todos pensamentos nessa visão em um processo nada sutil, tudo deve ser mágico e belo, o tempo todo, algo que por muitas vezes torna-se apenas sufocante.",
+7.5,
+"004"
+);
+```
+
+c) ***13:00:24 insert into Evaluation (id, comment, rate, movie_id) values ​​("4", "Coloca todos pensamentos nessa visão em um processo nada sutil, tudo deve ser mágico e belo, o tempo todo, algo que por muitas vezes torna-se apenas sufocante. ", 7.5," 006 ") Código de erro: 1452. Não é possível adicionar ou atualizar uma linha filha: uma restrição de chave estrangeira falha (` turing-kamila-melo` `Avaliação`, CONSTRAINT` Evaluation_ibfk_1` FOREIGN KEY (`movie_id`) REFERÊNCIAS` movie` (`id`)) 0,031 seg***
+
+informa que há uma restrição na chave estrangeira, pois não foi encontrado nenhum filme com esse id.
+
+d)
+```
+alter table movie
+drop column evaluation;
+```
+
+e) ***13:05:47 excluir do filme WHERE id = "002" Código de erro: 1451. Não é possível excluir ou atualizar uma linha pai: uma restrição de chave estrangeira falha (`turing-kamila-melo``Evaluation`, CONSTRAINT` Evaluation_ibfk_1` FOREIGN CHAVE (`movie_id`) REFERÊNCIAS` movie` (`id`)) 0,031 seg***
+
+Mostra uma restrição, pois existe uma outra tabela vinculada a ela.
+
+### Exercício 2
+
+a) É uma tabela de junção que faz uma interseção entre as tabelas filmes e atores.
+
+b)
+```
+insert into MovieCast
+values
+("002","003"),("002","002"),("003","005"),("003","006"),("004","001"),("004","004");
+```
+
+c) ***13:24:35 inserir nos valores do MovieCast ("002", "008") Código de erro: 1452. Não é possível adicionar ou atualizar uma linha filha: uma restrição de chave estrangeira falha (`turing-kamila-melo`.`MovieCast`, CONSTRAINT `MovieCast_ibfk_2` FOREIGN KEY (` actor_id`) REFERÊNCIAS `Ator` (` id`)) 0,031 seg***
+
+Mostra uma restrição, pois não existe o id informado.
+
+d) ***13:25:57 excluir do ator WHERE id = "002" Código de erro: 1451. Não é possível excluir ou atualizar uma linha pai: uma restrição de chave estrangeira falha (`turing-kamila-melo``MovieCast`, CONSTRAINT` MovieCast_ibfk_2` FOREIGN CHAVE (`actor_id`) REFERÊNCIAS` Ator` (`id`)) 0,031 seg***
+
+Mostra uma restrição, pois existe uma outra tabela vinculada a ela.
+
+### Exercício 3
+
+a) A query seleciona tudo da tabela movie e junta com a tabela de avaliações e traz todas as informações ligadas pelo mesmo id em comum. ON serve para passar uma condição pela qual as tabelas serão juntadas.
+
+b)
+```
+select movie.name, movie.id, Evaluation.rate from movie
+join Evaluation
+on movie.id = Evaluation.movie_id;
+```
+
+### Exercício 4
+
+a)
+```
+select movie.name, movie.id, Evaluation.rate, Evaluation.comment from movie
+left join Evaluation
+on movie.id = Evaluation.movie_id;
+```
+
+b)
+```
+select movie.id as movie_id, movie.name, MovieCast.actor_id from movie
+right join MovieCast
+on MovieCast.movie_id = movie.id;
+```
+
+c)
+```
+select avg(Evaluation.rate), movie.id, movie.name from movie
+left join Evaluation
+on movie.id = Evaluation.movie_id
+group by (movie.id);
+```
+
+### Exercício 5
+
+a) Essa query está unindo informações de 3 direntes tabelas. É necessário 2 join, pois primeiro se une duas e depois se com a outra.
+
+b)
+```
+SELECT movie.id as "ID Movie", movie.name as "Name Movie", Actor.id as "ID Actor", Actor.name as "Name Actor" FROM movie
+LEFT JOIN MovieCast ON movie.id = MovieCast.movie_id
+JOIN Actor ON Actor.id = MovieCast.actor_id;
+```
+
+### Exercício 6
+
+a) Relação M:N
